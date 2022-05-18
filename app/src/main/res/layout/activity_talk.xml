@@ -15,9 +15,10 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/searchbtn3"
         android:onClick="onTalkStart"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
         android:text="話題検索"
         android:textColor="#ffffff"
-        android:textSize="18sp"
         app:layout_constraintLeft_toRightOf="@+id/imageButton3"
         app:layout_constraintTop_toBottomOf="@+id/HitTalk" />
 
@@ -30,10 +31,11 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:background="@drawable/hittext"
-        android:textStyle="bold"
         android:gravity="center"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
         android:text="話題検索ボタンを押して下さい"
-        android:textSize="14sp"
+        android:textSize="14dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -43,7 +45,7 @@
     <ScrollView
         android:id="@+id/talk_scroll"
         android:layout_width="0dp"
-        android:layout_height="300dp"
+        android:layout_height="350dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -67,7 +69,7 @@
                 android:layout_height="match_parent"
                 android:text="履歴"
                 android:textStyle="bold"
-                android:textSize="14sp" />
+                android:textSize="14dp" />
         </LinearLayout>
 
     </ScrollView>
@@ -81,8 +83,11 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/menubtn"
         android:onClick="onNameDisp"
+        app:backgroundTint="@null"
+        android:textColor="@color/cardview_dark_background"
+        android:textStyle="bold"
         android:text="ニックネーム"
-        android:textSize="18sp"
+        android:textSize="18dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/talk_scroll" />
 
@@ -95,8 +100,11 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/menubtn"
         android:onClick="onMenu2"
+        app:backgroundTint="@null"
+        android:textColor="@color/cardview_dark_background"
+        android:textStyle="bold"
         android:text="メニュー"
-        android:textSize="18sp"
+        android:textSize="18dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/talk_scroll" />
 
@@ -105,6 +113,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:srcCompat="@drawable/talk"
+        app:backgroundTint="@null"
         android:background="#ffffff"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/HitTalk"
