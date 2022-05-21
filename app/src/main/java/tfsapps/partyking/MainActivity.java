@@ -7,7 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
+
+public class MainActivity extends AppCompatActivity{
     private NameTable nameTable;
     private TalkTable talkTable;
     /*
@@ -18,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     static private AdView mAdView3;
     static private AdRequest adRequest3;
     */
+    //  広告
+    private AdView mAdview;
 
     String nowname = "";
     String namelist = "";
@@ -31,11 +37,11 @@ public class MainActivity extends AppCompatActivity {
 
         nameTable = new NameTable();
         talkTable = new TalkTable();
-/*
-        mAdView1 = (AdView) findViewById(R.id.adView);
-        adRequest1 = new AdRequest.Builder().build();
-        mAdView1.loadAd(adRequest1);
-        */
+
+        //  広告
+        mAdview = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdview.loadAd(adRequest);
     }
 
     /* ニックネーム */
