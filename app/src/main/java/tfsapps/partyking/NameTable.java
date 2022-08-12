@@ -16,10 +16,13 @@ public class NameTable {
     private List<MyString> name1_femaleList = new ArrayList<MyString>();
     private List<MyString> name2_femaleList = new ArrayList<MyString>();
 
-    final int MaxName1Male = 25;
-    final int MaxName2Male = 25;
-    final int MaxName1Female = 25;
-    final int MaxName2Female = 25;
+    final int MAXNAME_25 = 25;
+    final int MAXNAME_30 = 30;
+
+    int MaxName1Male = 25;
+    int MaxName2Male = 25;
+    int MaxName1Female = 25;
+    int MaxName2Female = 25;
 
     private final Random rand = new Random(System.currentTimeMillis());
 
@@ -52,7 +55,13 @@ public class NameTable {
             "ファンタジー界の",
             "ラーメン界の",
             "モデル界の",
-            "リーマン界の"
+            "リーマン界の",
+            "アジアの",
+            "人類初の",
+            "アメリカの",
+            "パリの",
+            "銀河系の"
+
     };
     static String[] name2_male = {
             //  1-10
@@ -82,7 +91,12 @@ public class NameTable {
             "孫悟空（ドラゴンボール）",
             "のび太くん（どらえもん）",
             "パズー（天空の城ラピュタ）",
-            "コナン君（名探偵コナン）"
+            "コナン君（名探偵コナン）",
+            "しょうへい（大谷翔平）",
+            "TAKE（久保建英）",
+            "イナズマ純也（伊藤純也）",
+            "ゴメス（堀米雄斗）",
+            "肥後のベーブ・ルース（村上宗隆）"
 
 
             // 野球
@@ -134,7 +148,13 @@ public class NameTable {
             "ファンタジー界の",
             "スイーツ界の",
             "モデル界の",
-            "ＯＬ界の"
+            "ＯＬ界の",
+            "アジアの",
+            "人類初の",
+            "アメリカの",
+            "パリの",
+            "銀河系の"
+
     };
     static String[] name2_female = {
             // フィギュア
@@ -165,7 +185,12 @@ public class NameTable {
             "ラムちゃん（うる星やつら）",
             "キキ（魔女の宅急便）",
             "アラレちゃん（DR.ｽﾗﾝﾌﾟ）",
-            "サリー（魔法使いサリー）"
+            "サリー（魔法使いサリー）",
+            "なおみちゃん（大阪なおみ）",
+            "シブコ（渋野日向子）",
+            "まいやん（白石麻衣）",
+            "あいみょん",
+            "LISA",
 /*            "キム・ヨナ（フィギュア）",
             "荒川静香（フィギュア）",
             "宮原知子（フィギュア）",
@@ -174,8 +199,21 @@ public class NameTable {
     };
 
     //コンストラクタ
-    public NameTable() {
+    public NameTable(int data) {
         int i;
+        int name_max;
+
+        if (data == 0) {
+            name_max = MAXNAME_25;
+        }
+        else {
+            name_max = MAXNAME_30;
+        }
+
+        MaxName1Male = name_max;     // MAX 25
+        MaxName2Male = name_max;     // MAX 25
+        MaxName1Female = name_max;   // MAX 25
+        MaxName2Female = name_max;   // MAX 25
 
         /* 男性　ニックネームリスト作成 */
         for (i = 0; i < MaxName1Male; i++) {
